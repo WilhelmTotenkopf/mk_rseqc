@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+find -L data/ \
+	-name "*.bam" \
+| sed \
+	-e 's#data/#results/#g' \
+	-e 's#\.bam$#.infer_experiment.txt#g'
